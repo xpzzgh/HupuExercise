@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HupuExercise</string>
+    <string name="remember_password">同意虎扑协议，并自动登录</string>
+    <string name="login">登录</string>
+    <string name="username">用户名/手机号/邮箱</string>
+    <string name="password">密码</string>
+    <string name="index_welcome">For JRs\nFrom 虎扑体育</string>
+</resources>
