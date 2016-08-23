@@ -10,43 +10,50 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="6"
         android:orientation="vertical">
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/layout_username"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="@dimen/login_sign_margin"
-            android:layout_marginLeft="@dimen/login_sign_margin"
-            android:layout_marginRight="@dimen/login_sign_margin">
-            <EditText
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:maxLines="1"
-                android:inputType="text"
-                android:hint="@string/username"/>
 
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/layout_password"
+                android:layout_marginTop="@dimen/login_sign_margin"
+                android:layout_marginLeft="@dimen/login_sign_margin"
+                android:layout_marginRight="@dimen/login_sign_margin">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:hint="@string/username"/>
+            </android.support.design.widget.TextInputLayout>
+        </FrameLayout>
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/login_sign_margin"
-            android:layout_marginLeft="@dimen/login_sign_margin"
-            android:layout_marginRight="@dimen/login_sign_margin">
-            <EditText
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layout_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:hint="@string/password"/>
+                android:layout_marginTop="@dimen/login_sign_margin"
+                android:layout_marginLeft="@dimen/login_sign_margin"
+                android:layout_marginRight="@dimen/login_sign_margin">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:hint="@string/password"/>
 
 
-        </android.support.design.widget.TextInputLayout>
+            </android.support.design.widget.TextInputLayout>
+        </FrameLayout>
     </LinearLayout>
 
 
@@ -67,7 +74,7 @@
         android:id="@+id/button_login"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:layout_margin="@dimen/login_sign_margin"
         android:text="@string/login"
         android:textSize="20sp"

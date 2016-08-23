@@ -11,6 +11,7 @@ import cat.ereza.customactivityoncrash.CustomActivityOnCrash;
  */
 public class MyApplication extends Application{
 
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -22,4 +23,5 @@ public class MyApplication extends Application{
         CustomActivityOnCrash.setEnableAppRestart(true); //重启还是关闭app  true为重启
         CustomActivityOnCrash.install(this);
     }
+
 }

@@ -57,6 +57,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements ILogi
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setImmerseBar();
     }
 
     @Override

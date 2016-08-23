@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.example.pz.hupuexercise.MainActivity;
 import com.example.pz.hupuexercise.R;
 import com.example.pz.hupuexercise.base.BaseActivity;
+import com.example.pz.hupuexercise.base.MyApplication;
 import com.example.pz.hupuexercise.login.activity.LoginActivity;
 
 import butterknife.BindView;
@@ -29,6 +30,7 @@ public class ErrorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_error);
         ButterKnife.bind(this);
         final Intent intent = new Intent(this, LoginActivity.class);

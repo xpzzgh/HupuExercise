@@ -54,19 +54,23 @@ public class LoginPresenter extends BasePresenter<ILoginView>{
             passwordText = passwordLayout.getEditText().getText().toString();
             if(userText.isEmpty()) {
                 passwordLayout.setError(null);
-//                usernameLayout.setErrorEnabled(true);
+                passwordLayout.setErrorEnabled(false);
                 usernameLayout.setError("用户名不能为空");
             }else if(passwordText.isEmpty()) {
+                usernameLayout.setErrorEnabled(false);
                 usernameLayout.setError(null);
 //                passwordLayout.setErrorEnabled(true);
                 passwordLayout.setError("密码不能为空");
             }else {
                 usernameLayout.setError(null);
+                usernameLayout.setErrorEnabled(false);
                 passwordLayout.setError(null);
+                passwordLayout.setErrorEnabled(false);
                 passwordMd5 = Util.stringToMD5(passwordText);
 
                 subscription = UpdateClient.instanceOf().getUpdateSign()
                         .subscribeOn(Schedulers.io())
+                        .timeout(5, TimeUnit.SECONDS)
                         .flatMap(new Func1<UpdateSign, Observable<? extends LoginInfo>>() {
                             @Override
                             public Observable<? extends LoginInfo> call(UpdateSign updateSign) {
