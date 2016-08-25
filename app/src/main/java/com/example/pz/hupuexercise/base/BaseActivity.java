@@ -44,7 +44,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
             int opinion = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
             decorView.setSystemUiVisibility(opinion);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
+//            getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
     }
 
