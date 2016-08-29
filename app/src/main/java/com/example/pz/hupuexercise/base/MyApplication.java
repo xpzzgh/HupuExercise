@@ -18,10 +18,10 @@ public class MyApplication extends Application{
         //初始化fresco
         Fresco.initialize(this);
         //报错时跳出错误处理页面
-        CustomActivityOnCrash.setLaunchErrorActivityWhenInBackground(true);  //错误处理，设为false表示不显示，同时系统错误也将被屏蔽
-        CustomActivityOnCrash.setShowErrorDetails(true); //是否显示报错详情和按钮
-        CustomActivityOnCrash.setEnableAppRestart(true); //重启还是关闭app  true为重启
-        CustomActivityOnCrash.install(this);
+//        CustomActivityOnCrash.setLaunchErrorActivityWhenInBackground(true);  //错误处理，设为false表示不显示，同时系统错误也将被屏蔽
+//        CustomActivityOnCrash.setShowErrorDetails(true); //是否显示报错详情和按钮
+//        CustomActivityOnCrash.setEnableAppRestart(true); //重启还是关闭app  true为重启
+//        CustomActivityOnCrash.install(this);
     }
 
 }

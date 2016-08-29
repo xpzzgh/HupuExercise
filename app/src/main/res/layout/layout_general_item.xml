@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="3dp"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image_list_forum"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        fresco:viewAspectRatio="1.22"
+        fresco:actualImageScaleType="centerInside" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp">
+        <TextView
+            android:id="@+id/text_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/FontTitleList"
+            android:text="32145612311111111111111111111111111111111111111111111111111111111111111111111111111111111" />
+
+        <TextView
+            android:id="@+id/text_list_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:textSize="13dp"
+            style="@style/FontUserList"
+            android:text="12345678912333123456"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/text_list_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontUserList"
+            android:layout_marginRight="15dp"
+            android:text="1999"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+            android:id="@+id/image_list_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="12.5dp"
+            android:src="@drawable/icon_comment"
+            android:layout_toLeftOf="@id/text_list_comment"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"/>
+
+        <TextView
+            android:id="@+id/text_list_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontUserList"
+            android:text="20"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/image_list_comment"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+            android:id="@+id/image_list_light"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:src="@drawable/icon_light"
+            android:layout_toLeftOf="@id/text_list_light"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"/>
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

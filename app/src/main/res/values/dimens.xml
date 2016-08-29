@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="toolbar_elevation">4dp</dimen>
     <dimen name="login_sign_margin">5dp</dimen>
+    <dimen name="tab_height_bottom">55dp</dimen>
 </resources>

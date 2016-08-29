@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import com.example.pz.hupuexercise.R;
 import com.example.pz.hupuexercise.login.activity.LoginActivity;
+import com.example.pz.hupuexercise.main.activity.MainActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,14 +44,13 @@ public class IndexActivity extends AppCompatActivity{
             @Override
             public void run() {
                 try{
-                    Thread.sleep(500);
+                    Thread.sleep(2000);
                 }catch (InterruptedException e) {}
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(IndexActivity.this, LoginActivity.class);
+                        Intent intent = new Intent(IndexActivity.this, MainActivity.class);
                         startActivity(intent);
-
                         //fade_in 表示下一个activity淡入，fade_out表示这个activity切换时淡出
                         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                         IndexActivity.this.finish();

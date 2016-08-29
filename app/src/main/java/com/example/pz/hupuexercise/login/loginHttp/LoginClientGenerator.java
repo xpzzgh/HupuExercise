@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginClientGenerator {
 
-    public static Retrofit retrofit;
+    private static Retrofit retrofit;
 
     private LoginClientGenerator(){}
     static {

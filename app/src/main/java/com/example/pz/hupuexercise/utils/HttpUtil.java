@@ -4,9 +4,11 @@ import android.content.Context;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -15,6 +17,12 @@ import java.util.Map;
 
 public class HttpUtil {
 
+    /**
+     * 获取请求的sign
+     * @param mContext
+     * @param map 拼装sign所需的字段
+     * @return
+     */
     public static String getRequestSign(Context mContext, Map<String, String> map) {
         ArrayList<Map.Entry<String, String>> list =
                 new ArrayList<Map.Entry<String, String>>(map.entrySet());
@@ -48,5 +56,25 @@ public class HttpUtil {
             deviceId = tm.getDeviceId();
         }
         return deviceId;
+    }
+
+    /**
+     * 拼装请求用户版块信息所需的sign
+     * @param mContext
+     * @return
+     */
+    public static Map<String, String> getHttpRequestMap(Context mContext) {
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("client", getDeviceId(mContext));
+        map.put("night", "0");
+        UserHelper helper = UserHelper.instanceOf(mContext);
+        if (helper.isLogin()) {
+            try {
+                map.put("token", URLEncoder.encode(helper.getLoginInfo().getResult().getToken(), "UTF-8"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return map;
     }
 }

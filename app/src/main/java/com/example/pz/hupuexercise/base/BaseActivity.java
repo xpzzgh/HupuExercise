@@ -60,10 +60,10 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
 
     @Override
     protected void onDestroy() {
+        presenter.destroy(); //释放presenter资源
         if(unbinder != null) {
             unbinder.unbind();  //butterKnife 解绑
         }
-        presenter.destroy(); //释放presenter资源
         MyLog.v(MyLog.BASE_TAG, this.getLocalClassName() + ": OnDestroy");
         activityManager.finishActivity(this); //将要destroy的activity移出堆栈
         super.onDestroy();

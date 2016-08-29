@@ -5,4 +5,10 @@
     <string name="username">用户名/手机号/邮箱</string>
     <string name="password">密码</string>
     <string name="index_welcome">For JRs\nFrom 虎扑体育</string>
+    <string name="click_to_login">点击头像登录</string>
+    <string name="nba">NBA</string>
+    <string name="cba">CBA</string>
+    <string name="equipment">装备</string>
+    <string name="jrs">步行街</string>
+    <string name="mine">我的</string>
 </resources>

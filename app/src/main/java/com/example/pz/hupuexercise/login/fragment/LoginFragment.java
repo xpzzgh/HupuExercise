@@ -44,9 +44,6 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
 
     public static LoginFragment instanceOf(LoginPresenter loginPresenter) {
         LoginFragment loginFragment = new LoginFragment();
-        Bundle args = new Bundle();
-
-        loginFragment.setArguments(args);
         return loginFragment;
     }
 
@@ -60,9 +57,17 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.layout_login, container, false);
-        unbinder = ButterKnife.bind(this, view);
+        init();
         return view;
     }
+
+    @Override
+    public void init() {
+        unbinder = ButterKnife.bind(this, view);
+    }
+
+    @Override
+    public void initPresenter() {}
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
